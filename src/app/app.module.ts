@@ -10,13 +10,17 @@ import { ConnectComponent } from './components/connect/connect.component';
 import { DiseaseAddComponent } from './components/disease-add/disease-add.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ConnectThreadComponent } from './connect-thread/connect-thread.component';
+import { HeaderComponent } from './components/header/header.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ConnectComponent,
     DiseaseAddComponent,
-    ConnectThreadComponent
+    ConnectThreadComponent,
+    HeaderComponent
+
   ],
   imports: [
     ModalModule.forRoot(),
