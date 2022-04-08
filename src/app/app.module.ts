@@ -11,7 +11,10 @@ import { DiseaseAddComponent } from './components/disease-add/disease-add.compon
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ConnectThreadComponent } from './connect-thread/connect-thread.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ConnectBannerComponent } from './components/connect-banner/connect-banner.component';
+import { ConnectHeaderComponent } from './components/connect-header/connect-header.component';
 
+import { NgxSelectModule } from 'ngx-select-ex';
 
 @NgModule({
   declarations: [
@@ -19,14 +22,16 @@ import { HeaderComponent } from './components/header/header.component';
     ConnectComponent,
     DiseaseAddComponent,
     ConnectThreadComponent,
-    HeaderComponent
+    HeaderComponent,
+    ConnectBannerComponent,
+    ConnectHeaderComponent
 
   ],
   imports: [
     ModalModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule,NgxSelectModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,

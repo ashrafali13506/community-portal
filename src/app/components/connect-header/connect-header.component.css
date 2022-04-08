@@ -1,0 +1,46 @@
+.d-flex{
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+ngx-select{
+     width: 200px;
+}
+button{
+    background-color: #fee019;
+}
+.add_condition{
+
+    border: none;
+    background-color: #fee019;
+    height: 37px;
+    width: 200px;
+    border-radius: 3px;
+    color: black;
+
+}
+
+#header-search {
+    display: inline-block;
+     width: 200px; height: 32px;
+    /* background: black; */
+     /* color: white;  */
+     border: thin; 
+     outline: 1px solid grey;
+    padding: 1px;
+     font-size: 12pt; padding: 4px 28px 4px 4px; vertical-align: middle;
+  }
+  #search-icon {
+    position: relative; 
+    right: 28px;
+    top: 0;
+    fill: grey;
+    padding: 1px ;
+     width: 24px; height: 24px;
+    vertical-align: middle; 
+    /* cursor: pointer; */
+  }
+  .input-group{
+      position: relative;
+  }
