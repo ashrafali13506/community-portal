@@ -10,7 +10,6 @@ export class ConnectComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log("HI")
   }
 
 }
