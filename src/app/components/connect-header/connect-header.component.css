@@ -1,20 +1,24 @@
-.d-flex{
+.d-flex {
     margin: 20px auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-ngx-select{
-     width: 200px;
+
+ngx-select {
+    width: 200px;
+
 }
-button{
-    background-color: #fee019;
+
+button {
+    background-color: #a1cbfd;
 }
-.add_condition{
+
+.add_condition {
 
     border: none;
-    background-color: #fee019;
-    height: 37px;
+    background-color: #a1cbfd;
+    height: 38px;
     width: 200px;
     border-radius: 3px;
     color: black;
@@ -23,24 +27,28 @@ button{
 
 #header-search {
     display: inline-block;
-     width: 200px; height: 32px;
+    width: 200px;
+    height: 38px;
     /* background: black; */
-     /* color: white;  */
-     border: thin; 
-     outline: 1px solid grey;
-    padding: 1px;
-     font-size: 12pt; padding: 4px 28px 4px 4px; vertical-align: middle;
-  }
-  #search-icon {
-    position: relative; 
+    /* color: white;  */
+    border: thin;
+    outline: 2px solid #a1cbfd;
+    font-size: 12pt;
+    vertical-align: middle;
+}
+
+#search-icon {
+    position: relative;
     right: 28px;
     top: 0;
     fill: grey;
-    padding: 1px ;
-     width: 24px; height: 24px;
-    vertical-align: middle; 
+    padding: 1px;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
     /* cursor: pointer; */
-  }
-  .input-group{
-      position: relative;
-  }
+}
+
+.input-group {
+    position: relative;
+}

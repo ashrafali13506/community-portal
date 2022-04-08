@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+.ngx-select__toggle{
+    border-color: #a1cbfd !important;
+    border-width: 2px !important;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
