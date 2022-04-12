@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { from, Observable, of } from 'rxjs';
-import { filter, tap } from 'rxjs/operators';
+import { from, Observable, of, throwError } from 'rxjs';
+import { catchError, filter, tap } from 'rxjs/operators';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Forum } from 'src/interfaces/type';
 
 
@@ -10,6 +10,7 @@ import { Forum } from 'src/interfaces/type';
   providedIn: 'root',
 })
 export class ForumService {
+  forumUrl = "/hiims/v1f/forums";
   data1: any;
   bsModalRef?: BsModalRef;
   constructor(private bsModalService: BsModalService, private http: HttpClient) { }
@@ -430,8 +431,23 @@ export class ForumService {
       };
     };
   }
-  getForumData() {
-    return this.http.get<Forum>("/hiims/v1f/forums");
+  
+  getForum() {
+    return this.http.get<Forum>(this.forumUrl);
   }
+
+  postForum(forumData: Forum): Observable<Forum> {
+    return this.http.post<Forum>(this.forumUrl, forumData);
+  }
+
+  deleteForum(id: string): Observable<unknown> {
+    const url = `${this.forumUrl}/${id}`
+    return this.http.delete(url);
+  }
+
+  updateForum(forumData: Forum): Observable<Forum> {
+    return this.http.put<Forum>(this.forumUrl, forumData);
+  }
+
 }
 
