@@ -1,12 +1,10 @@
 
-img
-{
-  opacity: 0.3;
-}
+
 nav
 {
-
-  height: 100px;
+  background-color: aliceblue;
+  height: 80px;
+  padding-top: 8px;
   position:relative;
 }
 .navbar-nav
@@ -49,3 +47,8 @@ nav
   }
 }
 
+a.nav-link:hover{
+  color: blue !important;
+  text-decoration: underline;
+  font-size: 15px;
+}
