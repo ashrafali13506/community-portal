@@ -13,8 +13,10 @@ import { ConnectThreadComponent } from './connect-thread/connect-thread.componen
 import { HeaderComponent } from './components/header/header.component';
 import { ConnectBannerComponent } from './components/connect-banner/connect-banner.component';
 import { ConnectHeaderComponent } from './components/connect-header/connect-header.component';
-
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { NgxSelectModule } from 'ngx-select-ex';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,9 @@ import { NgxSelectModule } from 'ngx-select-ex';
     ConnectThreadComponent,
     HeaderComponent,
     ConnectBannerComponent,
-    ConnectHeaderComponent
-
+    ConnectHeaderComponent,
+    HomePageComponent,
+    FooterComponent
   ],
   imports: [
     ModalModule.forRoot(),
@@ -42,7 +45,8 @@ import { NgxSelectModule } from 'ngx-select-ex';
       duration:2000,
       position:"top-center",
 
-    })
+    }),
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

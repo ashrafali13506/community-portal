@@ -1,0 +1,102 @@
+<mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="../../../assets/images/pngtree-dark-red-halo-stacked-triangle-color-block-background-picture-image_1466946.jpg" alt="First slide">
+      <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption">
+      <h1 class="h3-responsive text-uppercase mb-4">Connect</h1>
+      <button type="button" class="btn btn-light" data-mdb-ripple-color="dark">Discover More</button>
+
+    </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="../../../assets/images/pngtree-simple-technology-forum-general-background-material-image_208058.jpg">
+      <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption">
+      <h1 class="h3-responsive text-uppercase mb-4">Welcome to Community Dashboard</h1>
+      <button type="button" class="btn btn-light" data-mdb-ripple-color="dark">Join Community</button>
+
+    </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="../../../assets/images/depositphotos_20981435-stock-photo-social-network.jpg">
+      <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption">
+      <h1 class="h3-responsive text-uppercase mb-4">Discover Community</h1>
+      <button type="button" class="btn btn-light" data-mdb-ripple-color="dark" [routerLink]="['/connect']" >View Community</button>
+    </div>
+  </mdb-carousel-item>
+</mdb-carousel>
+
+<div class="home-content py-4">
+  <h3>Featured Post</h3>
+  <div class="card mb-3">
+    <div class="card-body">
+      <div class="card-title row px-2">
+        <div class="col-lg-1 text-right">
+          <img src="../../../assets/images/connect/author-03.png" alt="author" width="57%">
+        </div>
+        <span class="col-lg-3 text-left pt-1 pl-1">Dr. Anthony &nbsp; | &nbsp; <span style="color: #007bff; font-size: 12px;">MBBS, MS(ortho)</span></span>
+      </div>
+      <div class="px-5 pt-2">
+        <p class="card-text" *ngIf="!datashow">
+          Living with MDD can affect how people feel, think, and go
+          about their everyday tasks. This can be challenging to
+          navigate, and help is often hard to find. Here at
+          PatientsLikeMe, we want to offer our members tools for
+          managing their MDD, along with engaging, and relevant
+          information about their condition.
+          <a *ngIf="!datashow" (click)="datashow = true"
+            >Read More</a
+          >
+        </p>
+        <p class="card-text" *ngIf="datashow">
+          Join us for a conversation with Dr. Mary C. (Kate) Burke,
+          MD, Senior Medical Advisor at PatientsLikeMe, about living
+          with MDD. Throughout the conversation, Dr. Kate will:
+        </p>
+        <p class="card-text" *ngIf="datashow">
+          <li>Share information about MDD symptoms</li>
+          <li>Outline what to expect from the evaluation</li>
+          <li>Detail common treatment options</li>
+          <li>
+            Explain goal attainment strategy and how it can be used
+            to help manage MDD
+          </li>
+        </p>
+        <p class="card-text" *ngIf="datashow">
+          Additionally, PLM members with MDD will share their
+          experience with MDD and some tips and strategies they have
+          used to help regulate their condition.
+        </p>
+        <p class="card-text" *ngIf="datashow">
+          Be sure to join the conversation – you can submit
+          questions in the comments that could be featured in a
+          future Q&A follow-up.
+        </p>
+        <iframe
+          class="card-text"
+          width="270"
+          height="200"
+          *ngIf="datashow"
+          src="https://www.youtube.com/embed/sHP0UIdZyI4"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+  <h3>Genomics</h3>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <button type="button" class="btn btn-primary">Button</button>
+    </div>
+  </div>
+</div>
