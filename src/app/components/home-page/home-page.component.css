@@ -1,0 +1,23 @@
+/* .home-page{
+    width: 70%;
+    margin: auto;
+    background-color: gainsboro;
+
+} */
+
+.carousel-inner {
+    max-height: 350px;
+}
+
+img {
+    max-height: 350px;
+}
+
+.carousel-caption{
+    top: 40%;
+}
+
+.home-content{
+    width: 70%;
+    margin: auto;
+}
