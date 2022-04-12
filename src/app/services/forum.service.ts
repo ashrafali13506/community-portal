@@ -431,9 +431,9 @@ export class ForumService {
       };
     };
   }
-  
-  getForum() {
-    return this.http.get<Forum>(this.forumUrl);
+
+  getForum(): Observable<Forum[]> {
+    return this.http.get<Forum[]>(this.forumUrl);
   }
 
   postForum(forumData: Forum): Observable<Forum> {
