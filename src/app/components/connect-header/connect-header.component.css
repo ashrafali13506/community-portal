@@ -7,6 +7,7 @@
 
 ngx-select {
     width: 200px;
+    margin: 10px;
 
 }
 
@@ -14,8 +15,8 @@ button {
     background-color: #a1cbfd;
 }
 
-.add_condition {
 
+.add_condition {
     border: none;
     background-color: #a1cbfd;
     height: 38px;
@@ -35,11 +36,22 @@ button {
     outline: 2px solid #a1cbfd;
     font-size: 12pt;
     vertical-align: middle;
+    margin: 10px;
+}
+
+@media only screen and (max-width:700px) {
+    .d-flex {
+        flex-direction: column;
+    }
+
+    #search-field {
+        margin-left: 22px;
+    }
 }
 
 #search-icon {
     position: relative;
-    right: 28px;
+    right: 40px;
     top: 0;
     fill: grey;
     padding: 1px;

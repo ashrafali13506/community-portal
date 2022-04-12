@@ -16,6 +16,7 @@ import { ConnectHeaderComponent } from './components/connect-header/connect-head
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { NgxSelectModule } from 'ngx-select-ex';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NgxSelectModule } from 'ngx-select-ex';
     HeaderComponent,
     ConnectBannerComponent,
     ConnectHeaderComponent,
-    HomePageComponent
+    HomePageComponent,
+    FooterComponent
   ],
   imports: [
     ModalModule.forRoot(),
