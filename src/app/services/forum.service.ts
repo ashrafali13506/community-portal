@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { from, Observable, of } from 'rxjs';
 import { filter, tap } from 'rxjs/operators';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { HttpClient } from '@angular/common/http';
+import { Forum } from 'src/interfaces/type';
 
 
 @Injectable({
@@ -10,7 +12,7 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 export class ForumService {
   data1: any;
   bsModalRef?: BsModalRef;
-  constructor(private bsModalService: BsModalService) {}
+  constructor(private bsModalService: BsModalService, private http: HttpClient) { }
   forumListData: any = [
     {
       id: 0,
@@ -427,6 +429,9 @@ export class ForumService {
         },
       };
     };
+  }
+  getForumData() {
+    return this.http.get<Forum>("/hiims/v1f/forums");
   }
 }
 
