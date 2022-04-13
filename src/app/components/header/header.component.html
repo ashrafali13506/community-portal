@@ -1,17 +1,18 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top w-100">
   <a class="navbar-brand" href="#">
-    <img src="../../../assets/citi-logo.png" height="100px" width="100px">
+    <img src="../../../assets/citi-logo.png" height="65px" width="110px">
 
   </a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav bg-light m-0 ml-lg-auto p-3 p-lg-0">
+  <div class="collapse navbar-collapse row" id="nav">
+      <ul class="navbar-nav m-0 ml-lg-auto p-3 p-lg-0 row w-75">
           <li class="d-inline d-lg-none">
               <button data-toggle="collapse" data-target="#nav" class="close float-right">&times;</button>
           </li>
+          <li class="col-lg-1"></li>
           <li class="nav-item">
               <a class="nav-link text-truncate" href="#spy0">MEDICAL</a>
           </li>
@@ -24,12 +25,15 @@
           <li class="nav-item">
               <a class="nav-link text-truncate" href="#spy3">COMMUNITIY</a>
           </li>
-          <li class="nav-item">
-              <a class="nav-link text-truncate" id='login' href="##">LOGIN</a>
+          <li class="col-lg-1"></li>
+          <!-- <li class="nav-item">
+              <button matButton class="nav-link text-truncate" id='login' href="##">LOGIN</button>
           </li>
           <li class="nav-item">
             <a class="nav-link text-truncate" id="register" href="##">REGISTER</a>
-        </li>
+        </li> -->
       </ul>
   </div>
+  <button type="button" class="btn btn-outline-primary waves-effect mr-4 py-1 px-3">Login</button>
+  <button type="button" class="btn btn-primary mr-4 py-1 px-3">Sign Up</button>
 </nav> 
