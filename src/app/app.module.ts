@@ -17,6 +17,8 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { NgxSelectModule } from 'ngx-select-ex';
 import { FooterComponent } from './components/footer/footer.component';
+import { ConnectMainComponent } from './components/connect-main/connect-main.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ConnectBannerComponent,
     ConnectHeaderComponent,
     HomePageComponent,
-    FooterComponent
+    FooterComponent,
+    ConnectMainComponent
   ],
   imports: [
     ModalModule.forRoot(),
@@ -39,6 +42,7 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    Ng2SearchPipeModule,
     // ConnectModule,
     ToastNotificationsModule.forRoot({
       autoClose: true,

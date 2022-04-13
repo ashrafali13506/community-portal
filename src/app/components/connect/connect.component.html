@@ -1,4 +1,4 @@
-<app-connect-header></app-connect-header> 
-<app-connect-banner></app-connect-banner>
-
-<app-connect-thread></app-connect-thread>
+<app-connect-header (searchTextMsg)="testVal($event)"></app-connect-header> 
+<app-connect-banner ></app-connect-banner>
+<app-connect-main [receive]="send" ></app-connect-main>
+<app-connect-thread   [receive]="send" ></app-connect-thread>

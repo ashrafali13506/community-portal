@@ -7,3 +7,14 @@ export interface Forum {
     visitCount?: Number,
     isactive?: false
 }
+
+export interface Thread { 
+    active: boolean
+    createdDate: Date
+    forumId: string
+    threadDesc: string
+    threadID: string
+    threadTitle: string
+    updatedDate: Date
+    visitCount: Number
+}

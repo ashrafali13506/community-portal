@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-connect',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConnectComponent implements OnInit {
 
+  send :any;
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
   }
 
+  testVal(event){ 
+    this.send = event; 
+    console.log(this.send)
+  }
 }

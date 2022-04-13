@@ -10,6 +10,7 @@ export class ConnectBannerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

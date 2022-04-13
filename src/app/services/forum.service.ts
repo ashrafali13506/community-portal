@@ -3,14 +3,15 @@ import { from, Observable, of, throwError } from 'rxjs';
 import { catchError, filter, tap } from 'rxjs/operators';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Forum } from 'src/interfaces/type';
+import { Forum, Thread } from 'src/interfaces/type';
 
 
 @Injectable({
   providedIn: 'root',
 })
 export class ForumService {
-  forumUrl = "/hiims/v1f/forums";
+  forumUrl = "/hiims/v1f/forums";  
+  threadUrl = "/hiims/vth1/threads"
   data1: any;
   bsModalRef?: BsModalRef;
   constructor(private bsModalService: BsModalService, private http: HttpClient) { }
@@ -433,6 +434,7 @@ export class ForumService {
   }
 
   getForum(): Observable<Forum[]> {
+    console.log(this.forumUrl);
     return this.http.get<Forum[]>(this.forumUrl);
   }
 
@@ -447,6 +449,10 @@ export class ForumService {
 
   updateForum(forumData: Forum): Observable<Forum> {
     return this.http.put<Forum>(this.forumUrl, forumData);
+  }
+
+  getAllThreads():Observable<Thread[]>{
+    return this.http.get<Thread[]>(this.threadUrl);
   }
 
 }

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { debounce, debounceTime } from 'rxjs/operators'; 
 
 @Component({
   selector: 'app-connect-header',
@@ -8,52 +9,58 @@ import { FormControl } from '@angular/forms';
 })
 export class ConnectHeaderComponent implements OnInit {
 
-
+  @Output() searchTextMsg = new EventEmitter<string>();
+  searchText: FormControl = new FormControl();
   public selectControl = new FormControl();
   public variables = [
     {
-      "id":"Covid Forum"
+      "id": "Covid Forum"
     },
     {
-      "id":"Diabetes Forum"
+      "id": "Diabetes Forum"
     }
-    ,{
-      "id":" My Forums"
+    , {
+      "id": " My Forums"
     }
- 
-    
+
+
   ];
 
   public variables2 = [
     {
-      "id":"fever"
+      "id": "fever"
     },
     {
-      "id":"cold"
+      "id": "cold"
     }
-    ,{
-      "id":" flu"
-    },{
-      "id":"Diabetes"
+    , {
+      "id": " flu"
+    }, {
+      "id": "Diabetes"
     }
-    ,{
-      "id":" Depression."
-    },{
-      "id":"Anxiety"
-    },{
-      "id":"Hemorrhoid"
-    },{
-      "id":"Yeast infection"
-    },{
-      "id":"Lupus"
+    , {
+      "id": " Depression."
+    }, {
+      "id": "Anxiety"
+    }, {
+      "id": "Hemorrhoid"
+    }, {
+      "id": "Yeast infection"
+    }, {
+      "id": "Lupus"
     }
- 
+
   ];
 
-  constructor() { }
+  constructor() { 
+    this.searchText.valueChanges.pipe(debounceTime(300)).subscribe(val =>{
+      this.searchTextMsg.emit(val);
+//  this.connectservice.textSend(val);
+    })
+  }
 
   ngOnInit(): void {
-    console.log("HI")
+    console.log("HI", this.searchText)
   }
 
 
